@@ -63,7 +63,12 @@ resource "aws_security_group" "ec2" {
     protocol        = "tcp"
     prefix_list_ids = [aws_ec2_managed_prefix_list.allowed_ips.id]
   }
-
+  ingress {
+    from_port       = 8888
+    to_port         = 8888
+    protocol        = "tcp"
+    prefix_list_ids = [aws_ec2_managed_prefix_list.allowed_ips.id]
+  }
   egress {
     from_port   = 0
     to_port     = 0
