@@ -1,0 +1,16 @@
+project     = "project-name"
+environment = "dev"
+tool        = "terraform"
+key_name    = "existing-keypair-name"
+aws_region  = "ap-northeast-1"
+
+allowed_ip = [
+  {
+    cidr        = "1.2.3.4/32"
+    description = "Office IP 1"
+  },
+  {
+    cidr        = "5.6.7.8/32"
+    description = "Office IP 2"
+  }
+]
